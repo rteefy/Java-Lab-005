@@ -1,12 +1,13 @@
 # Java-Lab-005 - Conditions Game
 
-Last week we learned a bit about Java Methods, and we've already been introduced to a special method called a constructor whether you know it or not! A constructor is a special method inside a class definition that is always **public** has **no return type** and is named **exactly the same as the class itself.** Why? Well we're learning about object oriented programming, which means we need to **construct** objects, and that is exactly what a constructor does! A constructor is always **public** because we always need to **create an object outside of its class definition.** A constructor has **no return type** because, along with the help of the **new** operator, it returns a **memory reference** to the **object** it creates by default! You've seen this in action MANY times now:
+Last week we learned a bit about Java Methods, and we've already been introduced to a special method called a constructor whether you know it or not! A constructor is a special method inside a class definition that is always **public** has **no return type** and is named **exactly the same as the class itself.** Why? Well we're learning about object oriented programming, which means we need to **construct** objects, and that is exactly what a constructor does! A constructor is always **public** because we always need to **create an object outside of its class definition.** A constructor has **no return type** because, along with the help of the **new** operator, it returns a **memory reference** to the **object** it creates by default! A constructor can't be **static** because that would mean it would belong to the **class** and not be able to modify object instances. You've seen this in action MANY times by now even if you don't recognize it:
 
-```
+* That's right!!! Below is creating a Scanner object by calling the **new** operator followed by the **Scanner** class's constructor, **Scanner(System.in)**
+```java
 Scanner s = new Scanner(System.in);
 ```
 
-This uses the **new** operator and the **Scanner(System.in)** constructor call to assign to **s** a memory reference that refers to a **Scanner** object! In fact, nearly every time you've seen the keyword **new** it is calling some class's constructor to return a memory reference to an object created somewhere in a computer's memory! Hence, we call **s** an object because it points to one.
+Above, the **new** operator and the **Scanner(System.in)** constructor return to **s** a memory reference that refers to a **Scanner** object in the **Heap**! In fact, nearly every time you've seen the keyword **new** it is calling some class's constructor to return a memory reference to an object created somewhere in a programs Heap memory! Hence, we call **s** an instance of an object because it points to an object.
 
 Well this week, you are going to use your new knowledge about Methods and Constructors to create your first classes, and its methods. Thus, you may not be familiar with another term quite yet, and that is **instance variables.** You know what variables are, and instance variables are similar, they are just defined within the **class** but outside the **methods.** They are typically defined at the top of the class, and they are **NON-static** variables that dictate what **state** an **object** of that **class type** is in. Take the first class you will create for example, a Dice class. You can have many dice, and that dice can have **n** sides (at least 2). Thus, an instance variable for a Dice class will be **sides,** and the constructor method for the Dice class will take the number of **sides** as a parameter, so you can initialize the object's number of sides.
 
@@ -70,7 +71,7 @@ I hope this diatribe just sparked an aha-moment, but if not, hopefully finishing
     * Finally, use the **Game** object to call the **play** method and play the game.
 
 ## Part 4 - Turn in
-1. Make sure to create a local **Sprint2023** branch as we've done all semester.
+1. Make sure to create a local **Feature1** branch as we've done all semester.
 2. Commit and push that branch to your GitHub Account's Fork of Java-Lab-005
 3. Create a Pull request back to my Java-Lab-005 Repo.
 4. Paste your Pull request URL into Canvas to complete the assignment.
